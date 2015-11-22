@@ -1,14 +1,20 @@
+function loadAttractions(){
+    extract();
 var map;
-var destination_latlng;
+
 var service;
 var infowindow;
 var attractions = [];
-
-var destination_latlng = new google.maps.LatLng(48.8567, 2.3508);
-
 map = new google.maps.Map(document.getElementById('map'), {});
+var destination = traveller.where;
+var destination_latlng = new google.maps.LatLng();
+var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': destination }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            destination_latlng = results[0].geometry.location;
+            console.log("City: " + destination + ", LatLng: " + destination_latlng);
 
-var request = {
+            var request = {
   location: destination_latlng,
   radius: '500',
   query: 'attractions'
@@ -31,6 +37,16 @@ function callback(results, status) {
         lng: results[i].geometry.location.lng()
       }
       attractions.push(attraction);
+      console.log(attraction.name);
     }
   }
 }
+        }
+        else {
+            console.log("Something fucked up guys " + status);
+        } 
+    });
+
+
+}
+
