@@ -38,7 +38,7 @@ function loadAttractions(out_sched) {
             }
             attractions.push(attraction);
           }
-          var numdays = 5;
+          var numdays = number_days(traveller.start_date,traveller.end_date);
           var schedule = CreateBlankSchedule(numdays);
           schedule = planTrip(attractions, schedule);
           var itinerary = $('.attractions');
@@ -95,8 +95,8 @@ function loadHotels() {
             };
             hotels.push(hotel);
           }
-          var num_days = 5;
-          var h = ChooseHotel(traveller.budget, hotels, num_days);
+          var numdays = number_days(traveller.start_date,traveller.end_date);
+          var h = ChooseHotel(traveller.budget, hotels, numdays);
           var itinerary = $('.hotel');
           itinerary.append('U B stayin at ' + h.name);
         }
