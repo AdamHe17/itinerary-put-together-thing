@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
 </head>
 
 <body>
@@ -17,9 +18,10 @@
       <div class="container">
         <br>
         <br>
-        <h1 class="header center green-text">Itinerary.</h1>
+        <div class="header center green-text"><img src="img/itinerary.png">
+        </div>
         <div class="row center">
-          <h4 class="header col s12 light">Automated Itinerary generator for hassle free travel planning.</h4>
+          <h4 class="header col s12 light">Automated itinerary generator for hassle-free travel planning.</h4>
         </div>
         <br>
       </div>
@@ -29,39 +31,39 @@
         <!--   Icon Section   -->
         <div class="row">
           <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center blue-text" id="block-icon"><i class="material-icons">navigation</i></h2>
+            <div class="icon-block purple lighten-2">
+              <h2 class="center blue-text lighten-1" id="block-icon"><i class="material-icons">navigation</i></h2>
               <h4 class="center" id="block-title">Destination</h4>
               <p class="light" id="block-description">Find your ideal travel destination</p>
               <div class="input-field">
                 <i class="material-icons prefix" style="font-size: 3rem;">my_location</i>
-                <input id="destination" type="text" class="validate">
+                <input id="destination" type="text" class="validate white">
                 <label for="destination">City</label>
               </div>
             </div>
           </div>
           <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center blue-text" id="block-icon"><i class="material-icons">group</i></h2>
+            <div class="icon-block orange lighten-1">
+              <h2 class="center blue-text lighten-2" id="block-icon"><i class="material-icons">group</i></h2>
               <h4 class="center" id="block-title">Budget</h4>
               <p class="light" id="block-description">How much greens you got?</p>
               <div class="input-field">
-                <input id="budget" type="number" class="validate">
+                <input id="budget" type="number" class="validate white">
                 <label for="budget">Max Budget</label>
               </div>
             </div>
           </div>
           <div class="col s12 m4">
-            <div class="icon-block">
+            <div class="icon-block pink lighten-1">
               <h2 class="center blue-text" id="block-icon"><i class="material-icons">today</i></h2>
               <h4 class="center" id="block-title">Dates</h4>
               <p class="light" id="block-description">The ideal travel dates.</p>
               <div class="input-field">
-                <input id="begin-date" type="date" class="datepicker">
+                <input id="begin-date" type="date" class="datepicker white">
                 <label for="begin-date">Begin Date</label>
               </div>
               <div class="input-field">
-                <input id="end-date" type="date" class="datepicker">
+                <input id="end-date" type="date" class="datepicker white">
                 <label for="begin-date">End Date</label>
               </div>
             </div>
@@ -75,10 +77,10 @@
       <div id="map"></div>
       <div class="results">
         <div class="hotel">
-          <h4 style="text-align: center">Hotel</h4>
+          <h4 style="text-align: center" class="blue-text">Hotel</h4>
         </div>
         <div class="attractions">
-          <h4 style="text-align: center">Attractions</h4>
+          <h4 style="text-align: center" class="green-text">Attractions</h4>
         </div>
       </div>
     </div>

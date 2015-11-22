@@ -39,13 +39,15 @@ function loadAttractions(out_sched) {
             }
             if (results[i].photos != null) {
               attraction.icon = results[i].photos[0].getUrl({
-                'maxWidth': 35,
-                'maxHeight': 35
+                'maxWidth': 200,
+                'maxHeight': 200
               })
             }
             attractions.push(attraction);
           }
           var numdays = number_days(traveller.start_date, traveller.end_date);
+          console.log(traveller.start_date);
+          console.log(traveller.end_date);
           var schedule = CreateBlankSchedule(numdays);
           schedule = planTrip(attractions, schedule);
           var itinerary = $('.attractions');
@@ -55,7 +57,7 @@ function loadAttractions(out_sched) {
             for (j = 0; j < 23; j++) {
               if (schedule[i][j] != null) {
                 if (schedule[i][j].name != 'sleep' && schedule[i][j].name != 'eat' && schedule[i][j].name != current_attraction) {
-                  itinerary.append('<div class="attraction">' + '<div class="time">' + j.toString() + ':00</div><div class="attraction_name">' + schedule[i][j].name + '</div></div>');
+                  itinerary.append('<div class="attraction"><img src='+schedule[i][j].icon+'><div class="time">' + j.toString() + ':00</div><div class="attraction_name">' + schedule[i][j].name + '</div></div>');
                   current_attraction = schedule[i][j].name;
                 }
               }
@@ -103,8 +105,8 @@ function loadHotels() {
             };
             if (results[i].photos != null) {
               hotel.icon = results[i].photos[0].getUrl({
-                'maxWidth': 35,
-                'maxHeight': 35
+                'maxWidth': 300,
+                'maxHeight': 300
               });
             };
             hotels.push(hotel);
@@ -112,7 +114,9 @@ function loadHotels() {
           var numdays = number_days(traveller.start_date, traveller.end_date);
           var h = ChooseHotel(traveller.budget, hotels, numdays);
           var itinerary = $('.hotel');
-          itinerary.append('U B stayin at ' + h.name);
+          itinerary.append('You will be staying at the ' + h.name);
+          itinerary.append('<p>Cost: $'+ Math.floor(h.cost).toString()+' per night, rated ' + h.rating.toString() + ' out of 5</p>');
+          itinerary.append('<img src='+h.icon+'>');
         }
       }
     } else {
