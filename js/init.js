@@ -6,5 +6,5 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-$('#begin-date').pickadate();
-$('#end-date').pickadate();
+var $input = $('.datepicker').pickadate();
+var picker = $input.pickadate('picker');
