@@ -1,5 +1,5 @@
-(function($){
-  $(function(){
+(function($) {
+  $(function() {
 
     $('.button-collapse').sideNav();
 
@@ -10,8 +10,8 @@ var $input = $('.datepicker').pickadate();
 var picker = $input.pickadate('picker');
 
 var traveller = {
-	budget : 0,
-	start_time : new Date(),
-	end_time : new Date(),
-	where: 'paris'
+  budget: 0,
+  start_time: new Date(),
+  end_time: new Date(),
+  where: 'paris'
 }
