@@ -19,7 +19,7 @@
         <br>
         <h1 class="header center green-text">Itinerary.</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Automated Itinerary generator for hassle free travel planning.</h5>
+          <h4 class="header col s12 light">Automated Itinerary generator for hassle free travel planning.</h4>
         </div>
         <br>
       </div>
@@ -30,9 +30,9 @@
         <div class="row">
           <div class="col s12 m4">
             <div class="icon-block">
-              <h2 class="center blue-text"><i class="material-icons">navigation</i></h2>
-              <h5 class="center">Destination</h5>
-              <p class="light">Find your ideal travel destination</p>
+              <h2 class="center blue-text" id="block-icon"><i class="material-icons">navigation</i></h2>
+              <h4 class="center" id="block-title">Destination</h4>
+              <p class="light" id="block-description">Find your ideal travel destination</p>
               <div class="input-field">
                 <i class="material-icons prefix" style="font-size: 3rem;">my_location</i>
                 <input id="destination" type="text" class="validate">
@@ -42,9 +42,9 @@
           </div>
           <div class="col s12 m4">
             <div class="icon-block">
-              <h2 class="center blue-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Budget</h5>
-              <p class="light">How much greens you got?</p>
+              <h2 class="center blue-text" id="block-icon"><i class="material-icons">group</i></h2>
+              <h4 class="center" id="block-title">Budget</h4>
+              <p class="light" id="block-description">How much greens you got?</p>
               <div class="input-field">
                 <input id="budget" type="number" class="validate">
                 <label for="budget">Max Budget</label>
@@ -53,9 +53,9 @@
           </div>
           <div class="col s12 m4">
             <div class="icon-block">
-              <h2 class="center blue-text"><i class="material-icons">today</i></h2>
-              <h5 class="center">Dates</h5>
-              <p class="light">The ideal travel dates.</p>
+              <h2 class="center blue-text" id="block-icon"><i class="material-icons">today</i></h2>
+              <h4 class="center" id="block-title">Dates</h4>
+              <p class="light" id="block-description">The ideal travel dates.</p>
               <div class="input-field">
                 <input id="begin-date" type="date" class="datepicker">
                 <label for="begin-date">Begin Date</label>
@@ -70,10 +70,18 @@
       </div>
       <br>
       <div class="row center">
+<<<<<<< HEAD
         <a id="calculate-button" class="btn-large waves-effect waves-light green" onclick="makeItinerary()">Calculate!</a>
+=======
+        <input type="image" src="img/CatButton.png" id="calculate-button">
+>>>>>>> origin/master
       </div>
       <div id="map"></div>
       <div class="results">
+        <div class="attractions">
+        </div>
+        <div class="hotel">
+        </div>
       </div>
     </div>
   </main>
@@ -93,7 +101,11 @@
   <script src="js/Itinerary.js"></script>
   <script src="js/attractions.js"></script>
   <script src="js/hotels.js"></script>
+<<<<<<< HEAD
 
+=======
+  <script src="js/transition.js"></script>
+>>>>>>> origin/master
 </body>
 
 </html>

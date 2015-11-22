@@ -17,31 +17,48 @@
 }
 
 body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	font-family: Gravity-Book;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: Gravity-Book;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
 }
 
 main {
-	flex: 1 0 auto;
-<<<<<<< HEAD
-}
-=======
+    flex: 1 0 auto;
 }
 
-.header img{
-	max-height: 180px;
+.header img {
+    max-height: 160px;
 }
 
 #calculate-button {
-	max-height: 100px;
+    max-height: 100px;
 }
 
 .results {
-	display: none;
-	background-color: #ccc;
-	overflow: auto;
+    display: none;
+    background-color: #ccc;
+    overflow: auto;
 }
 
->>>>>>> origin/master
+.attractions {
+    width: 70%;
+    display: inline-block;
+}
+
+.hotel {
+    width: 25%;
+    display: inline-block;
+}
+
+.attraction {
+
+}
