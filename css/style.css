@@ -25,9 +25,3 @@ body {
 main {
 	flex: 1 0 auto;
 }
-
-.results {
-	display: none;
-	background-color: #ccc;
-	overflow: auto;
-}

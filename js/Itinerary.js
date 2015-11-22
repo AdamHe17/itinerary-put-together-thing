@@ -33,14 +33,14 @@ function SortEvents(events) {
     });
 }
 
-function ChooseHotel(budget, hotels) {
+function ChooseHotel(budget, hotels, num_days) {
     var hotel_rating = 0;
     var hotel_budget = .7 * budget;
     var ii = 0;
     var jj = 0;
     while (hotels[ii] != null) {
-        if ((hotels[ii].cost < hotel_budget) && (hotels[ii].rating > hotel_rating)) {
-            hotel_rating = hotel[ii].rating;
+        if ((hotels[ii].cost*num_days < hotel_budget) && (hotels[ii].rating > hotel_rating)) {
+            hotel_rating = hotels[ii].rating;
             jj = ii;
             ii++;
         }
@@ -159,4 +159,10 @@ function planTrip(attractions, schedule){
         
     }
     return plan;
+}
+
+function makeItinerary(){
+    var schedule = [];
+    loadAttractions(schedule);
+    loadHotels();
 }
