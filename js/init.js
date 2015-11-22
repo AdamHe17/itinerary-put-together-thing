@@ -11,7 +11,7 @@ var picker = $input.pickadate('picker');
 
 var traveller = {
 	budget : 0,
-	start_time : '2015-11-22',
-	end_time : '2015-11-24',
+	start_time : new Date(),
+	end_time : new Date(),
 	where: 'paris'
 }
