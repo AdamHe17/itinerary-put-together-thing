@@ -6,7 +6,8 @@ var sleeptime = {
   rating: 5,
   name: "sleep",
   lat: null,
-  lng: null
+  lng: null,
+  icon: null
 }
 
 var mealtime = {
@@ -17,7 +18,8 @@ var mealtime = {
   rating: 5,
   name: "eat",
   lat: null,
-  lng: null
+  lng: null,
+  icon: null
 }
 
 function SortAttractions(attractions) {
@@ -109,13 +111,16 @@ function AllotTime(attraction, schedule_for_day, start_time) {
   }
 }
 
-function number_days(trip_start_time, trip_end_time) {
-  if (trip_start_time.getMonth() == trip_end_time.getMonth()) {
-    num_days = abs(trip_start_time.getDate - trip_end_time.getDate);
-  } else {
-    num_days = abs((30 * (trip_start_time.getMonth() - 1) + trip_start_time.getDate()) - (30 * (trip_end_time.getMonth() - 1) + trip_end_time.getDate()));
-  }
-  return num_days;
+function number_days(start_string, end_string){
+    var trip_start_time = new Date(start_string);
+    var trip_end_time = new Date(end_string);
+    if (trip_start_time.getMonth() == trip_end_time.getMonth()) {
+        num_days = Math.abs(trip_start_time.getDate() - trip_end_time.getDate());
+    }
+    else {
+        num_days = Math.abs((30 * (trip_start_time.getMonth() - 1) + trip_start_time.getDate()) - (30 * (trip_end_time.getMonth() - 1) + trip_end_time.getDate()));
+    }
+    return num_days;
 }
 
 function planTrip(attractions, schedule) {

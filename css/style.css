@@ -30,6 +30,9 @@ p {
 h4 {
 	font-size: 1.5rem;
 }
+h5 {
+    font-size: 1.35rem;
+}
 
 main {
     flex: 1 0 auto;
@@ -45,8 +48,6 @@ main {
 
 .results {
     display: none;
-    background-color: #ccc;
-    overflow: auto;
 }
 
 .attractions {
@@ -57,8 +58,15 @@ main {
 .hotel {
     width: 25%;
     display: inline-block;
+    top: 0;
+}
+
+.day {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .attraction {
-
-}
+    display: inline-block;
+    margin: 10px 10px
+;}

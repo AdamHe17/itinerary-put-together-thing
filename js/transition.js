@@ -7,8 +7,7 @@ $("#calculate-button").click(function() {
 
   setTimeout(function() {
     $('.results').css('display', 'block');
-    $('.results').css('height', 'auto');
-    loadHotels();
     loadAttractions();
+    loadHotels();
   }, 1000);
 })
