@@ -35,17 +35,23 @@ function loadAttractions(out_sched) {
               name: results[i].name,
               lat: results[i].geometry.location.lat(),
               lng: results[i].geometry.location.lng(),
-              icon: results[i].photos[0].getURL({'maxWidth': 35, 'maxHeight': 35})
+              icon: ''
+            }
+            if (results[i].photos != null) {
+              attraction.icon = results[i].photos[0].getUrl({
+                'maxWidth': 35,
+                'maxHeight': 35
+              })
             }
             attractions.push(attraction);
           }
-          var numdays = number_days(traveller.start_date,traveller.end_date);
+          var numdays = number_days(traveller.start_date, traveller.end_date);
           var schedule = CreateBlankSchedule(numdays);
           schedule = planTrip(attractions, schedule);
           var itinerary = $('.attractions');
           var current_attraction = '';
           for (i = 0; i < numdays; i++) {
-            itinerary.append('<div class="day"><h5>Day '+(i + 1).toString())+'</h5></div>';
+            itinerary.append('<div class="day"><h5>Day ' + (i + 1).toString()) + '</h5></div>';
             for (j = 0; j < 23; j++) {
               if (schedule[i][j] != null) {
                 if (schedule[i][j].name != 'sleep' && schedule[i][j].name != 'eat' && schedule[i][j].name != current_attraction) {
@@ -93,11 +99,17 @@ function loadHotels() {
               cost: Math.random() * 200 + 100,
               rating: results[i].rating,
               name: results[i].name,
-                        icon: results[i].photos[0].getURL({'maxWidth': 35, 'maxHeight': 35})
+              icon: ''
+            };
+            if (results[i].photos != null) {
+              hotel.icon = results[i].photos[0].getUrl({
+                'maxWidth': 35,
+                'maxHeight': 35
+              });
             };
             hotels.push(hotel);
           }
-          var numdays = number_days(traveller.start_date,traveller.end_date);
+          var numdays = number_days(traveller.start_date, traveller.end_date);
           var h = ChooseHotel(traveller.budget, hotels, numdays);
           var itinerary = $('.hotel');
           itinerary.append('U B stayin at ' + h.name);
