@@ -34,7 +34,8 @@ function loadAttractions(out_sched) {
               rating: results[i].rating,
               name: results[i].name,
               lat: results[i].geometry.location.lat(),
-              lng: results[i].geometry.location.lng()
+              lng: results[i].geometry.location.lng(),
+              icon: results[i].photos[0].getURL({'maxWidth': 35, 'maxHeight': 35})
             }
             attractions.push(attraction);
           }
@@ -91,7 +92,8 @@ function loadHotels() {
             var hotel = {
               cost: Math.random() * 200 + 100,
               rating: results[i].rating,
-              name: results[i].name
+              name: results[i].name,
+                        icon: results[i].photos[0].getURL({'maxWidth': 35, 'maxHeight': 35})
             };
             hotels.push(hotel);
           }

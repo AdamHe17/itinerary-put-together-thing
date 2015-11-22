@@ -6,7 +6,8 @@ var sleeptime = {
   rating: 5,
   name: "sleep",
   lat: null,
-  lng: null
+  lng: null,
+  icon: null
 }
 
 var mealtime = {
@@ -17,7 +18,8 @@ var mealtime = {
   rating: 5,
   name: "eat",
   lat: null,
-  lng: null
+  lng: null,
+  icon: null
 }
 
 function SortAttractions(attractions) {
