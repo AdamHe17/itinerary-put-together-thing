@@ -10,10 +10,4 @@ $("#calculate-button").click(function() {
     loadAttractions();
     loadHotels();
   }, 1000);
-
-  setTimeout(function() {
-    $('.results').css('display', 'block');
-    loadAttractions();
-    loadHotels();
-  }, 6000);
 })
