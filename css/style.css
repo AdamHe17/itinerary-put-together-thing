@@ -59,12 +59,6 @@ main {
 }
 
 .attractions {
-    width: 55%;
-    display: inline-block;
-}
-
-.hotel {
-    width: 40%;
     display: inline-block;
 }
 

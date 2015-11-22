@@ -6,8 +6,14 @@ $("#calculate-button").click(function() {
   $('#calculate-button').fadeOut(1000);
 
   setTimeout(function() {
-    $('.results').css('display', 'block');
+    $('.transition').css('background', 'block');
     loadAttractions();
     loadHotels();
   }, 1000);
+
+  setTimeout(function() {
+    $('.results').css('display', 'block');
+    loadAttractions();
+    loadHotels();
+  }, 6000);
 })
