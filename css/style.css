@@ -20,6 +20,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	font-family: Gravity-Book;
 }
 
 main {
@@ -31,3 +32,4 @@ main {
 	background-color: #ccc;
 	overflow: auto;
 }
+
