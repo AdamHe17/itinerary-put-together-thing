@@ -30,7 +30,7 @@ function loadAttractions(out_sched) {
               cost: 0,
               opening: 0,
               closing: 23,
-              duration: Math.floor(Math.random() * 4) + 1,
+              duration: Math.floor(Math.random() * 3) + 2,
               rating: results[i].rating,
               name: results[i].name,
               lat: results[i].geometry.location.lat(),
@@ -45,11 +45,11 @@ function loadAttractions(out_sched) {
           var itinerary = $('.attractions');
           var current_attraction = '';
           for (i = 0; i < numdays; i++) {
-            itinerary.append('<div class="day">Day ' + (i + 1).toString());
+            itinerary.append('<div class="day"><h5>Day '+(i + 1).toString())+'</h5></div>';
             for (j = 0; j < 23; j++) {
               if (schedule[i][j] != null) {
                 if (schedule[i][j].name != 'sleep' && schedule[i][j].name != 'eat' && schedule[i][j].name != current_attraction) {
-                  itinerary.append('<div class="attraction">' + '<div class="time">' + j.toString() + '</div><div class="attraction_name">' + schedule[i][j].name + '</div></div>');
+                  itinerary.append('<div class="attraction">' + '<div class="time">' + j.toString() + ':00</div><div class="attraction_name">' + schedule[i][j].name + '</div></div>');
                   current_attraction = schedule[i][j].name;
                 }
               }
