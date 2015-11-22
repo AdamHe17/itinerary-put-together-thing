@@ -6,7 +6,7 @@ $("#calculate-button").click(function() {
   $('#calculate-button').fadeOut(1000);
 
   setTimeout(function() {
-    $('.transition').css('background', 'block');
+    $('.results').css('display', 'block');
     loadAttractions();
     loadHotels();
   }, 1000);
