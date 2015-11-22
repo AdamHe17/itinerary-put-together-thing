@@ -20,8 +20,28 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	font-family: Gravity-Book;
 }
 
 main {
 	flex: 1 0 auto;
+<<<<<<< HEAD
 }
+=======
+}
+
+.header img{
+	max-height: 180px;
+}
+
+#calculate-button {
+	max-height: 100px;
+}
+
+.results {
+	display: none;
+	background-color: #ccc;
+	overflow: auto;
+}
+
+>>>>>>> origin/master
