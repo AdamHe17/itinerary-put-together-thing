@@ -45,7 +45,6 @@ main {
 
 .results {
     display: none;
-    background-color: #ccc;
     overflow: auto;
 }
 
@@ -57,8 +56,9 @@ main {
 .hotel {
     width: 25%;
     display: inline-block;
+    vertical-align: middle;
 }
 
-.attraction {
-
+.day {
+    text-align: center;
 }

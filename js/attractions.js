@@ -44,10 +44,11 @@ function loadAttractions(out_sched) {
           var itinerary = $('.attractions');
           var current_attraction = '';
           for (i = 0; i < numdays; i++) {
+            itinerary.append('<div class="day">Day ' + (i + 1).toString());
             for (j = 0; j < 23; j++) {
               if (schedule[i][j] != null) {
                 if (schedule[i][j].name != 'sleep' && schedule[i][j].name != 'eat' && schedule[i][j].name != current_attraction) {
-                  itinerary.append('<div class="attraction"><div class="day">'+(i+1).toString()+'</div><div class="time">' + j.toString() + '</div><div class="attraction_name">' + schedule[i][j].name + '</div>');
+                  itinerary.append('<div class="attraction">' + '<div class="time">' + j.toString() + '</div><div class="attraction_name">' + schedule[i][j].name + '</div></div>');
                   current_attraction = schedule[i][j].name;
                 }
               }
