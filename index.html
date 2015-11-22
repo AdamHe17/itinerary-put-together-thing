@@ -36,7 +36,7 @@
               <div class="input-field">
                 <i class="material-icons prefix" style="font-size: 3rem;">my_location</i>
                 <input id="destination" type="text" class="validate">
-                <label for="budget">City</label>
+                <label for="destination">City</label>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@
       </div>
       <br>
       <div class="row center">
-        <a href="#" id="calculate-button" class="btn-large waves-effect waves-light green">Calculate!</a>
+        <a id="calculate-button" class="btn-large waves-effect waves-light green" onclick="loadAttractions()">Calculate!</a>
       </div>
       <div id="map"></div>
       <div class="results">
@@ -87,9 +87,10 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX3R9405lgR787WXivYY23p3ao61VEAWk&libraries=places"></script>
-  <script src="js/attractions-hotels.js"></script>
+  <script src="js/attractions.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/extract.js"></script>
 </body>
 
 </html>
